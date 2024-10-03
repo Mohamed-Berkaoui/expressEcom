@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+</head>
+<body>
+    <%- include('./parts/navbar.ejs') %>
+    
+
+    <div class="container">
+        <% products.forEach(element => { %>
+            <div class="box">
+                <img src="<%= element.image %>" alt="">
+                <h3><%= element.title %></h3>
+                <p><%= element.price %></p>
+               <a href="/product/<%= element._id %>"> <button>show more</button></a>
+            </div>
+        <% }) %>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= product.title.slice(0,10) %>...</title>
+  </head>
+  <body>
+    <%- include('./parts/navbar.ejs') %>
+
+    <section>
+      <img src="<%= product.image %>" alt="" />
+      <div class="product-desc">
+        <h2><%= product.title %></h2>
+        <p><%= product.description %></p>
+        <p><%= product.price %></p>
+        <button>add to cart</button>
+        <a href="/update/<%= product.id %>"> <button>update</button></a>
+
+        
+      </div>
+    </section>
+    <script>
+
+    </script>
+  </body>
+</html>
